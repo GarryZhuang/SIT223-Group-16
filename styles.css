@@ -1,0 +1,72 @@
+body {
+    background-color: rgb(66, 66, 66);
+    padding-top: 10%;
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+    border: 3px solid blue;
+    background-color: rgb(140, 140, 252);
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+form {
+    margin: auto;
+    width: 50%;
+    background-color: lrgb(140, 140, 252);
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.sub_butn{
+    border-radius: 4px;
+    background-color: blue;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 16px;
+    padding: 20px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.sub_butn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+ }
+  
+.sub_butn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+  
+.sub_butn:hover span {
+    padding-right: 25px;
+}
+  
+.sub_butn:hover span:after {
+    opacity: 1;
+    right: 0;
+}
