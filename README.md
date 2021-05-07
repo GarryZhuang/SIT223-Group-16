@@ -3,4 +3,4 @@ This is a TeamMate Recruitment App we have created for the School of IT at Deaki
 
 https://garryzhuang.github.io/SIT223-Group-16/
 
-![alt text](https://i.imgur.com/mre4vCQ.png)
+![alt text](https://i.imgur.com/PPqKwx8.png)
