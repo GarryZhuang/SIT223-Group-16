@@ -1,2 +1,2 @@
-# sit223-group16.github.io
-SIT223 Group Project
+# SIT223 Group Assignment
+This is a TeamMate Recruitment App we have created for the School of IT at Deakin University.
