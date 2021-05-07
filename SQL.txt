@@ -1,0 +1,42 @@
+CREATE TABLE STUDENT_DETAILS (
+Student_Nun int(9) NOT NULL PRIMARY KEY,
+First_Name varchar(30),
+Last_Name varchar(30),
+);
+
+CREATE TABLE UNIT_DETAILS (
+Unit_Code char(6) NOT NULL PRIMARY KEY,
+Unit_Description text(1000),
+);
+
+CREATE TABLE ENROLLED_UNITS (
+Student_Num int(9) NOT NULL PRIMARY KEY FOREIGN KEY REFERENCES STUDENT_DETAILS(Student_Num),
+Unit_Code char(6) NOT NULL PRIMARY KEY FOREIGN KEY REFERENCES UNIT_DETAILS(Unit_Code),
+Target_Grade int(1),
+Trimester_Num int(1),
+);
+
+CREATE TABLE LOGIN_DETAILS (
+Student_Num int(9) NOT NULL PRIMARY KEY FOREIGN KEY REFERENCES STUDENT_DETAILS(Student_Num),
+Enc_Password varchar(255) NOT NULL,
+);
+
+CREATE TABLE GROUP_DETAILS (
+Group_Num int(3) NOT NULL PRIMARY KEY,
+Student_Num int(9) NOT NULL PRIMARY KEY FOREIGN KEY REFERENCES STUDENT_DETAILS(Student_Num),
+Unit_Code FOREIGN KEY REFERENCES UNIT_DETAILS(Unit_Code),
+Leader_Bool bool,
+Recruitment_Msg text(2000),
+Team_Nane varchar(100),
+Team_Desc text(2000),
+Expiry_Date date,
+Team_Cap int(2)
+);
+
+CREATE TABLE GROUP_APPLICATION (
+Message_Num int(255) NOT NULL PRIMARY KEY,
+Student_Num int(9) FOREIGN KEY REFERENCES STUDENT_DETAILS(Student_Num)
+Group_Num int(3) FOREIGN KEY REFERENCES GROUP_DETAILS(Group_Num),
+Msg_Text text(1000),
+Approved_Bool bool,
+);
