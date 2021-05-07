@@ -80,3 +80,33 @@ input[type=password], select {
     opacity: 1;
     right: 0;
 }
+
+.centerhome {
+    margin: auto;
+    width: 50%;
+    border: 3px solid blue;
+    background-color: rgb(128, 157, 231);
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.button {
+    border-radius: 4px;
+    background-color: blue;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 16px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    transition-duration: 0.4s;
+}
+
+.button:hover {
+    background-color: #ffffff; /* Green */
+    color: rgb(0, 0, 0);
+    border: black;
+}
