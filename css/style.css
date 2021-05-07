@@ -7,7 +7,7 @@ body {
     margin: auto;
     width: 50%;
     border: 3px solid blue;
-    background-color: rgb(140, 140, 252);
+    background-color: rgb(128, 157, 231);
     padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
@@ -16,7 +16,7 @@ body {
 form {
     margin: auto;
     width: 50%;
-    background-color: lrgb(140, 140, 252);
+    background-color: rgb(128, 157, 231);
     padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
