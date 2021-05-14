@@ -1,0 +1,120 @@
+/* # For "index.html"
+   #
+   # This is the CSS file for the Login Form only.
+   # Do not use elsewhere or you may experience problems
+   #
+   # ~ Garry Zhuang 2021
+*/ 
+
+body {
+    background-color: rgb(66, 66, 66);
+    padding-top: 10%;
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+    border: 3px solid blue;
+    background-color: rgb(128, 157, 231);
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+form {
+    margin: auto;
+    width: 50%;
+    background-color: rgb(128, 157, 231);
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=password], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.sub_butn{
+    border-radius: 4px;
+    background-color: blue;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 16px;
+    padding: 20px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.sub_butn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+ }
+  
+.sub_butn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+  
+.sub_butn:hover span {
+    padding-right: 25px;
+}
+  
+.sub_butn:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.btns {
+    margin: auto;
+    width: 50%;
+    border: 3px solid blue;
+    background-color: rgb(128, 157, 231);
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.button {
+    border-radius: 4px;
+    background-color: blue;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 16px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    transition-duration: 0.4s;
+}
+
+.button:hover {
+    background-color: #ffffff; /* Green */
+    color: rgb(0, 0, 0);
+    border: black;
+}
