@@ -81,7 +81,7 @@ input[type=password], select {
     right: 0;
 }
 
-.centerhome {
+.btns {
     margin: auto;
     width: 50%;
     border: 3px solid blue;
