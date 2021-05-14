@@ -110,3 +110,15 @@ input[type=password], select {
     color: rgb(0, 0, 0);
     border: black;
 }
+
+.txtbx {
+    border-radius: 4px;
+    background-color: blue;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 16px;
+    padding: 20px;
+    width: 200px;
+    margin: 5px;
+}
