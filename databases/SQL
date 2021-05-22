@@ -1,42 +1,55 @@
 CREATE TABLE STUDENT_DETAILS (
-Student_Num number(9) NOT NULL PRIMARY KEY,
+Student_Num number(9) NOT NULL,
 First_Name varchar(30),
 Last_Name varchar(30),
+PRIMARY KEY (Student_Num)
 );
 
 CREATE TABLE UNIT_DETAILS (
-Unit_Code char(6) NOT NULL PRIMARY KEY,
-Unit_Description text(1000),
+Unit_Code char(6) NOT NULL,
+Unit_Description varchar(1000),
+PRIMARY KEY (Unit_Code)
 );
 
 CREATE TABLE ENROLLED_UNITS (
-Student_Num number(9) NOT NULL PRIMARY KEY FOREIGN KEY REFERENCES STUDENT_DETAILS(Student_Num),
-Unit_Code char(6) NOT NULL PRIMARY KEY FOREIGN KEY REFERENCES UNIT_DETAILS(Unit_Code),
+Student_Num number(9) NOT NULL,
+Unit_Code char(6) NOT NULL,
 Target_Grade number(1),
 Trimester_Num number(1),
+PRIMARY KEY (Student_Num, Unit_Code),
+FOREIGN KEY (Student_Num) REFERENCES STUDENT_DETAILS(Student_Num),
+FOREIGN KEY (Unit_Code) REFERENCES UNIT_DETAILS(Unit_Code)
 );
 
 CREATE TABLE LOGIN_DETAILS (
-Student_Num number(9) NOT NULL PRIMARY KEY FOREIGN KEY REFERENCES STUDENT_DETAILS(Student_Num),
+Student_Num number(9) NOT NULL,
 Enc_Password varchar(255) NOT NULL,
+PRIMARY KEY (Student_Num),
+FOREIGN KEY (Student_Num) REFERENCES STUDENT_DETAILS(Student_Num)
 );
 
 CREATE TABLE GROUP_DETAILS (
-Group_Num number(3) NOT NULL PRIMARY KEY,
-Student_Num number(9) NOT NULL PRIMARY KEY FOREIGN KEY REFERENCES STUDENT_DETAILS(Student_Num),
-Unit_Code FOREIGN KEY REFERENCES UNIT_DETAILS(Unit_Code),
-Leader_Bool bool,
-Recruitment_Msg text(2000),
+Group_Num number(3) NOT NULL,
+Student_Num number(9) NOT NULL,
+Unit_Code char(6),
+Leader_Bool char(1),
+Recruitment_Msg varchar(2000),
 Team_Nane varchar(100),
-Team_Desc text(2000),
+Team_Desc varchar(2000),
 Expiry_Date date,
-Team_Cap number(2)
+Team_Cap number(2),
+PRIMARY KEY (Group_Num, Student_Num),
+FOREIGN KEY (Student_Num) REFERENCES STUDENT_DETAILS(Student_Num),
+FOREIGN KEY (Unit_Code) REFERENCES UNIT_DETAILS(Unit_Code)
 );
 
 CREATE TABLE GROUP_APPLICATION (
-Message_Num number(255) NOT NULL PRIMARY KEY,
-Student_Num number(9) FOREIGN KEY REFERENCES STUDENT_DETAILS(Student_Num)
-Group_Num number(3) FOREIGN KEY REFERENCES GROUP_DETAILS(Group_Num),
-Msg_Text text(1000),
-Approved_Bool bool,
+Message_Num varchar(4000) NOT NULL,
+Student_Num number(9),
+Group_Num number(3),
+Msg_Text varchar(1000),
+Approved_Bool char(1),
+PRIMARY KEY (Message_Num),
+FOREIGN KEY (Student_Num) REFERENCES STUDENT_DETAILS(Student_Num),
+FOREIGN KEY (Group_Num, Student_Num) REFERENCES GROUP_DETAILS(Group_Num, Student_Num)
 );
